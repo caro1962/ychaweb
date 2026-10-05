@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="YCHA: un espacio para compartir ideas, proyectos y novedades.">
+  <title>YCHA | Ideas y proyectos</title>
+  <style>
+    :root { --ink:#14352d; --green:#245b46; --paper:#f6f7f0; --line:#d6dfd3; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:18px/1.6 system-ui,sans-serif; }
+    a { color:inherit; text-underline-offset:4px; }
+    a:focus-visible { outline:3px solid #976400; outline-offset:6px; }
+    .wrap { width:min(1100px,calc(100% - 48px)); margin:auto; }
+    header { border-bottom:1px solid var(--line); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:22px 0; flex-wrap:wrap; }
+    .brand { font-size:26px; font-weight:800; letter-spacing:2px; text-decoration:none; }
+    nav { display:flex; gap:24px; flex-wrap:wrap; font-size:15px; }
+    nav a { text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    .hero { padding:92px 0 84px; }
+    .label { font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; }
+    h1 { font-size:clamp(48px,8vw,88px); line-height:1.06; font-weight:650; letter-spacing:-3px; margin:22px 0 28px; max-width:780px; }
+    .intro { max-width:590px; font-size:21px; color:#415a50; }
+    .button { display:inline-block; margin-top:20px; padding:14px 24px; background:var(--green); color:white; border-radius:7px; text-decoration:none; font-weight:600; }
+    .button:hover { background:#173d2f; }
+    .about { padding:40px; background:#e5ecdf; border-radius:14px; margin-bottom:70px; }
+    h2 { font-size:32px; line-height:1.25; letter-spacing:-1px; margin:0 0 18px; }
+    .about p { max-width:740px; margin:0; }
+    section { scroll-margin-top:24px; }
+    .cards { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:28px 0 70px; }
+    .card { border:1px solid var(--line); border-radius:12px; padding:32px; background:#fffef9; }
+    .number { font-size:13px; font-weight:700; color:#557052; }
+    h3 { font-size:24px; margin:14px 0; }
+    .card p { margin:0; color:#415a50; }
+    .news { border-top:1px solid var(--line); padding:42px 0 70px; }
+    .news p { max-width:680px; }
+    footer { border-top:1px solid var(--line); padding:26px 0; font-size:14px; }
+    .footer { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .skip { position:absolute; left:16px; top:-90px; background:white; padding:12px; z-index:1; }
+    .skip:focus { top:12px; }
+    @media(max-width:600px) {
+      .wrap { width:calc(100% - 36px); }
+      .hero { padding:56px 0; }
+      h1 { letter-spacing:-2px; }
+      .about { padding:26px; margin-bottom:48px; }
+      .cards { grid-template-columns:1fr; gap:16px; margin-bottom:48px; }
+      .card { padding:26px; }
+      nav { gap:18px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Ir al contenido</a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="YCHA, inicio">YCHA<span aria-hidden="true">.</span></a>
+      <nav aria-label="Navegación principal">
+        <a href="#acerca">Acerca de</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#novedades">Novedades</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" class="wrap">
+    <section class="hero" id="inicio" aria-labelledby="titulo">
+      <p class="label">Bienvenida a YCHA</p>
+      <!-- Cambia este título y el párrafo por tu presentación. -->
+      <h1 id="titulo">Ideas que<br>toman forma.</h1>
+      <p class="intro">Un espacio para compartir proyectos, descubrir nuevas ideas y dar el siguiente paso.</p>
+      <a class="button" href="#proyectos">Explorar proyectos <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="about" id="acerca" aria-labelledby="acerca-titulo">
+      <h2 id="acerca-titulo">Acerca de YCHA</h2>
+      <p>Cada proyecto empieza con una idea. Este es un lugar para reunirlas, desarrollarlas y compartir lo que vamos aprendiendo en el camino.</p>
+    </section>
+    <section id="proyectos" aria-labelledby="proyectos-titulo">
+      <p class="label">Lo que viene</p>
+      <h2 id="proyectos-titulo">Proyectos</h2>
+      <div class="cards">
+        <article class="card">
+          <span class="number">01 / EXPLORAR</span>
+          <h3>Nuevas ideas</h3>
+          <p>Próximamente compartiremos aquí nuestros primeros proyectos y sus avances.</p>
+        </article>
+        <article class="card">
+          <span class="number">02 / COMPARTIR</span>
+          <h3>Aprender en comunidad</h3>
+          <p>Un espacio para reunir recursos, experiencias y aprendizajes que puedan servir a otras personas.</p>
+        </article>
+      </div>
+    </section>
+    <section class="news" id="novedades" aria-labelledby="novedades-titulo">
+      <h2 id="novedades-titulo">Estamos comenzando.</h2>
+      <p>Gracias por visitar YCHA. Vuelve pronto para conocer las próximas novedades.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer">
+      <span>YCHA · Ideas y proyectos</span>
+      <a href="https://github.com/caro1962/ychaweb">Ver el proyecto en GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+</body>
+</html>
